@@ -1,0 +1,10 @@
+* {
+    color: white;
+    border: 1px solid;
+    border-color: gray;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1C318A;
+}
