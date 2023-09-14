@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AG4.0 - Epica Educativa - Foro</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<%# INCLUIMOS EL EJS DEL NAV %>
+    <%- include('nav') %>
+ 
+<%# PONEMOS UN FILA QUE CONTENGA 2 COLUMNAS QUE SERAN EL CUERPO DEL HTML %>
+    <div class="row">
+        <div class="col">
+            <h1>Posts</h1>
+            <ul>
+            <% allPosts.forEach((post) => { %>
+            <li>
+                <p>
+                    <h3><%- post.title %></h3><br>
+                    <h4><%- post.author %></h4><br>
+                    <i><%- post.content %></i>
+                </p>
+            </li>
+            <% }); %>
+            </ul>
+        </div>
+
+        <div class="col">
+            <%- include('aside')%>
+        </div>
+
+    </div>
+
+    
+
+    <a href="/foros/new">Crear nuevo Post!</a>
+
+    
+
+    <br><br>
+
+    <script src="/js/bootstrap.js"></script>
+
+    <%- include('footer') %>
+</body>
+</html>

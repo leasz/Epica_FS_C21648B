@@ -3,13 +3,15 @@ const { Router } = require('express')
 
 // IMPORTAMOS LAS FUNCIONES DEL CRUD DESDE EL ARCHIVO DE CONTROLADORES
 const {
+    newPost,
+    testFun,
     listPost,
     findPost,
     createPost,
     updatePost,
     deletePost
     
-} = require('../controllers/task.controllers')
+} = require('../controllers/posts.controllers')
 
 // INSTANCIAMOS ROUTER
 const router = Router()
@@ -26,9 +28,10 @@ const router = Router()
 // )
 
 // DECLARAMOS LAS ROUTAS Y LE PASAMOS LAS FUNCIONES QUE IMPORTAMOS
+router.post('/foros/createpost', newPost)
+router.get('/foros/new', createPost)
 router.get('/foros/', listPost)
 router.get('/foros/:id', findPost)
-router.post('/foros/', createPost)
 router.put('/foros/:id', updatePost)
 router.delete('/foros/:id', deletePost)
 

@@ -1,4 +1,6 @@
 * {
+    padding: 0px;
+    margin: 0px;
     color: white;
     border: 1px solid;
     border-color: gray;
@@ -6,5 +8,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1C318A;
+    background-color: rgb(51, 90, 126);
+}
+
+header {
+    color: red;
 }

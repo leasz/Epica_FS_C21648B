@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Post</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <form action="/foros/createpost" method="POST">
+      <div class="mb-3">
+      <label class="form-label">Autor</label>
+      <input type="text" class="form-control" name="author">
+    </div>
+        <div class="mb-3">
+          <label class="form-label">Titulo</label>
+          <input type="text" class="form-control" name="title">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Contenido</label>
+          <input type="text" class="form-control" name="content">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+<br>
+
+
+  <script src="/js/bootstrap.js"></script>
+  </body>
+  </html>
