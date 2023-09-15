@@ -4,7 +4,6 @@ const { Router } = require('express')
 // IMPORTAMOS LAS FUNCIONES DEL CRUD DESDE EL ARCHIVO DE CONTROLADORES
 const {
     newPost,
-    testFun,
     listPost,
     findPost,
     createPost,

@@ -7,7 +7,8 @@ const { DataTypes } = require('sequelize')
 const PostModel = sequelize.define('posts', {
     author: DataTypes.STRING,
     title: DataTypes.STRING,
-    content: DataTypes.TEXT
+    content: DataTypes.TEXT,
+    imgURL: DataTypes.STRING
 })
 
 module.exports = {PostModel}

@@ -23,6 +23,13 @@
                     <h3><%- post.title %></h3><br>
                     <h4><%- post.author %></h4><br>
                     <i><%- post.content %></i>
+                    <img src="<%- post.imgURL %>" width="128px" height="128px">
+                    <br>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-danger me-md-2" type="button">Editar</button>
+                        <button class="btn btn-warning" type="button">Eliminar</button>
+                    </div>
                 </p>
             </li>
             <% }); %>

@@ -20,19 +20,20 @@ async function createPost(req,res){
     res.render("new")
     }
 
+// FUNCION QUE CREA UN NUEVO VALOR EN LA DB OBTENIENDO LOS DATOS DESDE EL REQ.BODY
     const newPost = async (req,res) => {
-    const { author, title, content  } = req.body
+    const { author, title, content, imgURL  } = req.body
     console.log(req.body)
-    await PostModel.create( { author, title, content } )
-    console.log( { author, title, content } )
+    await PostModel.create( { author, title, content, imgURL } )
+    console.log( { author, title, content, imgURL } )
     res.redirect('/foros')
     }
 
 // CREAMOS FUNCION PARA ACTUALIZAR UN POST
 async function updatePost(req,res){
     const id = req.params.id
-    const { author, title, content } = req.body
-    await PostModel.update({ author, title, content }, {
+    const { author, title, content, imgURL } = req.body
+    await PostModel.update({ author, title, content, imgURL }, {
         where : {
             id
         }
